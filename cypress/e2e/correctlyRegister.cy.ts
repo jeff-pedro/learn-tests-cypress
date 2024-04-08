@@ -1,5 +1,5 @@
 describe('Register page', () => {
-  it('should fill out a form and register one user', () => {
+  it('Fills out a form correctly to register a new user', () => {
     cy.visit('http://localhost:4200/#/home')
     cy.contains('a', 'Register now').click()
     cy.get('[data-test="email"]').type('sparrow@pirates.sea')
