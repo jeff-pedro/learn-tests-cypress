@@ -4,6 +4,6 @@ describe('Login page', () => {
     })
 
     it('Should fill out a login form correctly and log in', () => {
-        cy.login('sparrow', 'theblackpearl')
+        cy.login('sparrow', 'secret123')
     })
 })

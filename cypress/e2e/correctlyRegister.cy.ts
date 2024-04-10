@@ -8,7 +8,7 @@ describe('Register page', () => {
       'sparrow@pirates.sea',
       'Jack Sparrow',
       'sparrow',
-      'theblackpearl'
+      'secret123'
     )
   })
 })
