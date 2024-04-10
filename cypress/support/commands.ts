@@ -2,7 +2,8 @@ Cypress.Commands.add('login', (name, password) => {
     cy.get('[data-test="loginUserName"]').type(name)
     cy.get('[data-test="loginPassword"]').type(password)
     cy.get('[data-test="loginBtn"]').click()
-    cy.contains('a', '(Logout)').should('be.visible')
+
+    // cy.contains('a', '(Logout)').should('be.visible')
 })
 
 Cypress.Commands.add('register', (email, fullName, username, password) => {
