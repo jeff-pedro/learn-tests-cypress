@@ -1,37 +1,17 @@
-/// <reference types="cypress" />
-// ***********************************************
-// This example commands.ts shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-//
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
+Cypress.Commands.add('login', (name, password) => {
+    cy.get('[data-test="loginUserName"]').type(name)
+    cy.get('[data-test="loginPassword"]').type(password)
+    cy.get('[data-test="loginBtn"]').click()
+    cy.contains('a', '(Logout)').should('be.visible')
+})
+
+Cypress.Commands.add('register', (email, fullName, username, password) => {
+    cy.contains('a', 'Register now').click()
+
+    cy.get('[data-test="email"]').type(email)
+    cy.get('[data-test="fullName"]').type(fullName)
+    cy.get('[data-test="registerUserName"]').type(username)
+    cy.get('[data-test="registerPassword"]').type(password)
+    
+    cy.contains('button', 'Register').click()
+})
