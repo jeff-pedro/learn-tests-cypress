@@ -1,5 +1,5 @@
 describe('Register page', () => {
-  
+
   beforeEach(() => {
     cy.visit('http://localhost:4200/#/home')
   })
@@ -14,8 +14,8 @@ describe('Register page', () => {
   })
 
   const users = require('../fixtures/users.json')
-  
-  users.forEach((user: Object) => {
+
+  users.forEach((user) => {
 
     it(`Should fill out a form correctly to register a new user ${user.fullName}`, () => {
       cy.register(
