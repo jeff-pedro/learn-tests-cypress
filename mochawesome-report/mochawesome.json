@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-10T00:31:15.943Z",
+    "end": "2024-04-10T00:31:18.574Z",
+    "duration": 2631,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41975f3d-7b40-40be-9cad-8255a82754d5",
+      "title": "",
+      "fullFile": "cypress/e2e/incorrectlyRegister.cy.ts",
+      "file": "cypress/e2e/incorrectlyRegister.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f09b41ac-e508-41ca-92cf-c238390b3005",
+          "title": "Register page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fills out a form incorrectly",
+              "fullTitle": "Register page Fills out a form incorrectly",
+              "timedOut": null,
+              "duration": 1305,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:4200/#/home');\ncy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.contains('button', 'Register').click();\ncy.contains('Email is required!').should('be.visible');\ncy.contains('Full name is required!').should('be.visible');\ncy.contains('User name is required!').should('be.visible');\ncy.contains('Password is required!').should('be.visible');",
+              "err": {},
+              "uuid": "db3ced8a-a4e3-4b0d-a5db-65852c8556e7",
+              "parentUUID": "f09b41ac-e508-41ca-92cf-c238390b3005",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db3ced8a-a4e3-4b0d-a5db-65852c8556e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
